@@ -16,3 +16,7 @@ phpfpm:
     - "9000:9000"
   volumes:
     - ./public:/usr/share/nginx/html
+mysql:
+  image: mariadb
+  environment:
+    MYSQL_ROOT_PASSWORD: admin
