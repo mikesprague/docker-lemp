@@ -1,6 +1,6 @@
 # Docker LEMP
 
-Docker Compose build scripts to create simple LEMP environment local PHP development
+Docker Compose build scripts to create simple LEMP environment for local PHP 7 development
 
 * Nginx
 * PHP 7
