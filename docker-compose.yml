@@ -10,3 +10,9 @@ nginx:
 
       - ./logs/nginx-error.log:/var/log/nginx/error.log
       - ./logs/nginx-access.log:/var/log/nginx/access.log
+phpfpm:
+  image: php:fpm
+  ports:
+    - "9000:9000"
+  volumes:
+    - ./public:/usr/share/nginx/html
