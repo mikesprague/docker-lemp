@@ -9,18 +9,12 @@ nginx:
 
 php:
     build: ./php/
-    expose:
-        - 9000
+    ports:
+        - 9000:9000
     links:
         - mysql
     volumes_from:
         - app
-
-app:
-    image: php:7.0-fpm
-    volumes:
-        - ./public:/var/www/html
-    command: "true"
 
 mysql:
     image: mariadb:latest
@@ -31,12 +25,6 @@ mysql:
         MYSQL_USER: admin
         MYSQL_PASSWORD: admin
 
-data:
-    image: mariadb:latest
-    volumes:
-        - /var/lib/mysql
-    command: "true"
-
 phpmyadmin:
     image: phpmyadmin/phpmyadmin
     ports:
@@ -45,3 +33,16 @@ phpmyadmin:
         - mysql
     environment:
         PMA_HOST: mysql
+
+app:
+    image: php:7.0-fpm
+    volumes:
+        - ./public:/var/www/html
+    command: "true"
+
+
+data:
+    image: mariadb:latest
+    volumes:
+        - /var/lib/mysql
+    command: "true"
