@@ -8,3 +8,7 @@ RUN mv composer.phar /usr/local/bin/composer
 RUN  apt-get update
 RUN apt-get install -y wget
 RUN rm -rf /var/lib/apt/lists/*
+
+RUN wget https://phar.phpunit.de/phpunit.phar
+RUN chmod +x phpunit.phar
+RUN mv phpunit.phar /usr/local/bin/phpunit
