@@ -16,3 +16,8 @@ RUN mv phpunit.phar /usr/local/bin/phpunit
 RUN wget -c http://static.phpmd.org/php/latest/phpmd.phar
 RUN chmod +x phpmd.phar
 RUN mv phpmd.phar /usr/local/bin/phpmd
+
+RUN curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
+RUN curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcbf.phar
+RUN mv phpcs.phar /usr/local/bin/phpcs
+RUN mv phpcbf.phar /usr/local/bin/phpcbf
