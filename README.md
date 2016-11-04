@@ -2,10 +2,13 @@
 
 Docker Compose build scripts to create simple LEMP environment for local PHP 7 development
 
-* Nginx
-* PHP 7
-* MariaDB
-* phpMyAdmin
+* [Nginx](https://nginx.org/en/)
+* [PHP 7](http://php.net/)
+* [MariaDB](https://mariadb.org/)
+* [phpMyAdmin](https://www.phpmyadmin.net)
+* [PHPUnit](https://phpunit.de/)
+* [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
+* [PHP Mess Detector](https://phpmd.org/)
 
 ### Getting Started
 
@@ -23,4 +26,6 @@ docker-compose up -d
 * phpMyAdmin access at [http://192.168.99.100:8183](http://192.168.99.100:8183)
     * username: root
     * password: root
-* **IMPORTANT** You must put this project somewhere under you Windows User folder (e.g. C:\Users\mike\containers\docker-lemp) as `docker-compose` only has access to your User folder in Windows
+* **IMPORTANT** If running on Windows with Docker Toolbox, you must put this project
+somewhere under you Windows User folder (e.g. C:\Users\mike\containers\docker-lemp)
+as `docker-compose` only has access to your User folder in Windows
